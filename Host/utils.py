@@ -2,7 +2,7 @@ import random
 from primality import primality
 
 def generate_prime(min=0, max=10)->tuple:
-    #random.seed(13)
+    random.seed(13)
     diff = max-min
     if min % 2 == 0:
         min += 1
@@ -49,5 +49,6 @@ def find_generator(prime):
             break
 
     random_index = random.randrange(0, len(generators))
+    print(f"Generator {generators[random_index]} found")
     return generators[random_index]
         
