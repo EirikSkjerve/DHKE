@@ -4,16 +4,6 @@ import time
 
 '''Generates a prime P and a generator for the finite group Z(p) 
     (group of all remainders (except 0) of division with p)'''
-class P_G_Generator:
-    def __init__(self, max_prime):
-        self.max_prime = max_prime
-    
-    def generate_p_g(self):
-        prime = generate_prime(self.max_prime//2, self.max_prime)
-        gen = find_generator(prime)
-        return prime, gen
-
-
 def generate_p_g(max_prime):
         prime = generate_prime(max_prime//2, max_prime)
         gen = find_generator(prime)
@@ -54,7 +44,7 @@ while len(clients) < 2:
 #generate P and g
 print("Generating Prime and Generator...")
 start = time.time()
-P_g = generate_p_g(2**20)
+P_g = generate_p_g(2**66)
 end = time.time()
 print(f"Prime and generator generated after {end-start} s")
 

@@ -34,7 +34,8 @@ if __name__ == "__main__":
                        socket.SOCK_STREAM)
 
     client.connect((HOST, PORT))
-    username = input("Welcome to a diffie hellman key exchange. What is your name? \nType it here please: ")
+    #username = input("Welcome to a diffie hellman key exchange. What is your name? \nType it here please: ")
+    username = "USER"
     User = Client(username)
     print("Please hold while your prime and generator is being generated... \n")
     data = client.recv(1024).decode()
