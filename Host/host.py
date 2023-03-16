@@ -28,7 +28,7 @@ def recieve_from_client(client):
 
 host = socket.socket(socket.AF_INET,
                        socket.SOCK_STREAM)
-HOST = "127.0.0.1"
+HOST = "192.168.1.177"
 PORT = 65432
 
 host.bind((HOST, PORT))

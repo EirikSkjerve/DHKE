@@ -27,7 +27,8 @@ class Client:
 
 
 if __name__ == "__main__":
-    HOST = "127.0.0.1"
+    #HOST = "127.0.0.1"
+    HOST = input("Hostname here:\n")
     PORT = 65432
 
     client = socket.socket(socket.AF_INET,
